@@ -8,8 +8,8 @@ Given a square matrix A, crout(A) will return matrices L and U such that A = L*U
 L is lower triangular, and U is unit upper triangular.
 
 ### Files
-crout.py  
-crout.pyx
+[crout.py](https://github.com/shannonzylstra/lu-decomposition/blob/Cython/crout.py)  
+[crout.pyx](https://github.com/shannonzylstra/lu-decomposition/blob/Cython/crout.pyx)  
 
 ### Examples
 
