@@ -1,7 +1,8 @@
 lu-decomposition
 ================
 Implementing LU decomposition in Python, using Crout's Algorithm.  
-For implementation in Cython, see Cython branch of this repository... I am having "fork" issues.
+For implementation in Cython, see the [Cython branch](https://github.com/shannonzylstra/lu-decomposition/tree/Cython)
+of this repository.
 
 ### The "Math"
 
