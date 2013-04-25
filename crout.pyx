@@ -11,9 +11,9 @@ AUTHOR:
     - Shannon Rae Zylstra, April 2013
 """
 
-from cmath import e
+from cmath import e     # need to use an import statement that is more C-friendly
 
-def crout(A):
+def crout(A):           # having issues with static typing; use numpy? np.ndarray...
     """
     Returns the lower-triangular matrix L and the unit upper-triangular
     matrix U such that L*U = the given matrix A.
@@ -30,13 +30,13 @@ def crout(A):
     """
     # This is Crout's Algorithm.
     cdef int n = len(A)
-    for j in xrange(n):
-        for i in xrange(j, n):  # starting at L[j][j], solve j-th column of L
-            alpha = float(A[i][j])
+    for j in xrange(n):             # experimented *way* too much with using functions (and globals)
+            alpha = float(A[i][j])  # instead of loops, but no real speed-up (this isn't the best Cython-y algorithm).
+        for i in xrange(j, n):
             for k in xrange(j):
                 alpha -= A[i][k]*A[k][j]
             A[i][j] = alpha
-        for i in xrange(j+1, n):# starting at U[j][j+1], solve j-th row of U
+        for i in xrange(j+1, n):
             alpha = float(A[j][i])
             for k in xrange(j):
                 alpha -= A[j][k]*A[k][i]
