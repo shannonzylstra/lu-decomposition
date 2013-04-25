@@ -11,9 +11,9 @@ AUTHOR:
     - Shannon Rae Zylstra, April 2013
 """
 
-from cmath import e     # need to use an import statement that is more C-friendly
+from cmath import e         # need to use an import statement that is more C-friendly
 
-def crout(A):           # having issues with static typing; use numpy? np.ndarray...
+cdef list crout(list A):    # having issues with static typing; use numpy? np.ndarray...
     """
     Returns the lower-triangular matrix L and the unit upper-triangular
     matrix U such that L*U = the given matrix A.
