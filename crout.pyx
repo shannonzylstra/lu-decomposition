@@ -38,7 +38,5 @@ def crout(A):
             alpha = float(A[j][i])
             for k in xrange(j):
                 alpha -= A[j][k]*A[k][i]
-            if int(A[j][j]) == 0:
-                A[j][j] = e-40
             A[j][i] = alpha/A[j][j]
     return A
