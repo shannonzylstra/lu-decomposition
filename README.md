@@ -37,7 +37,7 @@ Using %timeit on crout.pyx:
 
 ### Using %cython
 
-Here are some links to some more work I did on Cythonizing: <-- I believe these are public .html files!
+Here are some links to some more work I did on Cythonizing: <-- I believe these are public .html files!  
 [Really bad.](http://480.sagenb.org/home/Shannon_Zylstra/5/cells/2/__sagenb_servers_sage_notebook_480_sagenb_home_Shannon_Zylstra_5_code_sage12_spyx.html)  
 [A little bit better?](http://480.sagenb.org/home/Shannon_Zylstra/5/cells/1/__sagenb_servers_sage_notebook_480_sagenb_home_Shannon_Zylstra_5_code_sage8_spyx.html)  
 [And a little bit better? Maybe?](http://480.sagenb.org/home/Shannon_Zylstra/3/cells/8/__sagenb_servers_sage_notebook_480_sagenb_home_Shannon_Zylstra_3_code_sage2_spyx.html)  
