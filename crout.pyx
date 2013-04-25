@@ -30,8 +30,8 @@ def crout(A):           # having issues with static typing; use numpy? np.ndarra
     """
     # This is Crout's Algorithm.
     cdef int n = len(A)
-    for j in xrange(n):             # experimented *way* too much with using functions (and globals)
-            alpha = float(A[i][j])  # instead of loops, but no real speed-up (this isn't the best Cython-y algorithm).
+    for j in xrange(n):         # experimented *way* too much with using functions (and globals)
+        alpha = float(A[i][j])  # instead of loops, but no real speed-up (this isn't the best Cython-y algorithm).
         for i in xrange(j, n):
             for k in xrange(j):
                 alpha -= A[i][k]*A[k][j]
