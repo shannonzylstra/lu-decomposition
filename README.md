@@ -1,6 +1,6 @@
 lu-decomposition
 ================
-Implementing LU decomposition in Python, using Crout's Algorithm.
+Implementing LU decomposition in Cython, using Crout's Algorithm.
 
 ### The "Math"
 
@@ -21,7 +21,7 @@ In the sage command line (after loading the .pyx file!):
 
 ### Using %timeit
  
- Cython cuts the time of this loopy (sad face) program in half!
+ Cython cuts the time of this loopy (sad face) .py program in half!
  
  Using %timeit on crout.py:
  
