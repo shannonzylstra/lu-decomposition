@@ -13,13 +13,24 @@ crout.pyx -- Cython version for Homework 3.
 
 ### Examples
 
-In the sage command line (after loading the .py file!):
+In the sage command line (after loading the .pyx file!):
 
     sage: a = [[1, 3, 5], [2, 4, 7], [1, 1, 0]]
     sage: crout(a)
     ([[1.0, 0, 0], [2.0, -2.0, 0], [1.0, -2.0, -2.0]], [[1.0, 3.0, 5.0], [0, 1.0, 1.5], [0, 0, 1.0]])
 
-If we want to view L and U separately:
+### Using %timeit
+ 
+ Cython cuts the time of this loopy (sad face) program in half!
+ 
+ Using %timeit on crout.py:
+ 
+     sage: a = [[1, 3, 5], [2, 4, 7], [1, 1, 0]]
+     sage: %timeit crout(a)
+     625 loops, best of 3: 25.6 µs per loop
 
-    sage: L = crout(a)[0]
-    sage: U = crout(a)[1]
+Using %timeit on crout.pyx:
+
+     sage: a = [[1, 3, 5], [2, 4, 7], [1, 1, 0]]
+     sage: %timeit crout(a)
+     625 loops, best of 3: 10.3 µs per loop
