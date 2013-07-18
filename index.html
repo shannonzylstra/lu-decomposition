@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Lu-decomposition by shannonzylstra</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Lu-decomposition</h1>
+        <p></p>
+
+        <p class="view"><a href="https://github.com/shannonzylstra/lu-decomposition">View the Project on GitHub <small>shannonzylstra/lu-decomposition</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/shannonzylstra/lu-decomposition/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/shannonzylstra/lu-decomposition/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/shannonzylstra/lu-decomposition">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a name="lu-decomposition" class="anchor" href="#lu-decomposition"><span class="octicon octicon-link"></span></a>lu-decomposition</h1>
+
+<p>Implementing LU decomposition in Python, using Crout's Algorithm.<br>
+For implementation in Cython, see the <a href="https://github.com/shannonzylstra/lu-decomposition/tree/Cython">Cython branch</a>
+of this repository.<br>
+Also -- if you have the stomach for it, you can glance at <a href="http://480.sagenb.org/home/Shannon_Zylstra/6/print">my sage notebook log</a>. &lt;-- My bad: I thought this was public!</p>
+
+<h3>
+<a name="the-math" class="anchor" href="#the-math"><span class="octicon octicon-link"></span></a>The "Math"</h3>
+
+<p>Given a square matrix A, crout(A) will return matrices L and U such that A = L*U.<br>
+L is lower triangular, and U is unit upper triangular.</p>
+
+<h3>
+<a name="files" class="anchor" href="#files"><span class="octicon octicon-link"></span></a>Files</h3>
+
+<p>crout.py</p>
+
+<h3>
+<a name="examples" class="anchor" href="#examples"><span class="octicon octicon-link"></span></a>Examples</h3>
+
+<p>In the sage command line (after loading the .py file!):</p>
+
+<pre><code>sage: a = [[1, 3, 5], [2, 4, 7], [1, 1, 0]]
+sage: crout(a)
+([[1.0, 0, 0], [2.0, -2.0, 0], [1.0, -2.0, -2.0]], [[1.0, 3.0, 5.0], [0, 1.0, 1.5], [0, 0, 1.0]])
+</code></pre>
+
+<p>If we want to view L and U separately:</p>
+
+<pre><code>sage: L = crout(a)[0]
+sage: U = crout(a)[1]
+</code></pre>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/shannonzylstra">shannonzylstra</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
